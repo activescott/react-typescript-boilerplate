@@ -2,11 +2,14 @@ const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+
+
 
 module.exports = {
   mode: "development",
   devtool: "inline-source-map",
-  entry: './src/App.tsx',
+  entry: './src/containers/App.tsx',
   devServer: {
     contentBase: './dist'
   },
@@ -28,6 +31,9 @@ module.exports = {
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
       template: 'src/index.html'
-    })
+    }),
+    new CopyWebpackPlugin([
+      { from: 'data/', to:'data/' }
+    ])
   ]
 }

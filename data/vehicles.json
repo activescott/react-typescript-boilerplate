@@ -1,0 +1,25 @@
+{
+  "vehicles": [
+    {
+      "type": "Car",
+      "color": "Red",
+      "numWheels": 4,
+      "age": 1,
+      "key": 1
+    },
+    {
+      "type": "Truck",
+      "color": "Green",
+      "numWheels": 4,
+      "age": 2,
+      "key": 2
+    },
+    {
+      "type": "Motorcycle",
+      "color": "Blue",
+      "numWheels": 2,
+      "age": 3,
+      "key": 3      
+    }
+  ]
+ }
